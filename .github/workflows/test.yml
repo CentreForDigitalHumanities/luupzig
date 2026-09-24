@@ -35,4 +35,4 @@ jobs:
         yarn build elements
         yarn build frontend
         chromedriver --version
-        yarn test
+        yarn test-single
