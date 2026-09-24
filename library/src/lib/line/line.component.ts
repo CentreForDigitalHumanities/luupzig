@@ -1,10 +1,12 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
 import { GlossTokenizerService, Token } from '../gloss-tokenizer.service';
 
 @Component({
-  selector: 'luu-line',
-  templateUrl: './line.component.html',
-  styleUrls: ['./line.component.scss']
+    selector: 'luu-line',
+    templateUrl: './line.component.html',
+    styleUrls: ['./line.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class LineComponent implements OnChanges {
   tokens: Token[] = [];
