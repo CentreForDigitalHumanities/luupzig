@@ -1,9 +1,11 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'luu-translation',
-  templateUrl: './translation.component.html',
-  styleUrls: ['./translation.component.scss']
+    selector: 'luu-translation',
+    templateUrl: './translation.component.html',
+    styleUrls: ['./translation.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class TranslationComponent {
 

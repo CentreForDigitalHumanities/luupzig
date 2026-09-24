@@ -1,4 +1,4 @@
-import { AfterContentChecked, Component, ContentChildren, HostListener, OnDestroy, QueryList } from '@angular/core';
+import { AfterContentChecked, Component, ContentChildren, HostListener, OnDestroy, QueryList, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ExplainComponent } from '../explain/explain.component';
 import { LineComponent } from '../line/line.component';
@@ -6,9 +6,11 @@ import { SourceComponent } from '../source/source.component';
 import { TranslationComponent } from '../translation/translation.component';
 
 @Component({
-  selector: 'luu-view',
-  templateUrl: './view.component.html',
-  styleUrls: ['./view.component.scss']
+    selector: 'luu-view',
+    templateUrl: './view.component.html',
+    styleUrls: ['./view.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class ViewComponent implements AfterContentChecked, OnDestroy {
   subscriptions: Subscription[] = [];

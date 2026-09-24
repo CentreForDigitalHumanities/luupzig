@@ -4,8 +4,8 @@
   "author": "Utrecht University, Centre for Digital Humanities",
   "license": "BSD-3-Clause",
   "peerDependencies": {
-    "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0",
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0",
     "bulma": "^1.0.0"
   },
   "dependencies": {
