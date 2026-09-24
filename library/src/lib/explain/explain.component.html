@@ -1,9 +1,13 @@
-(@for (token of tokens; track token) {
-@for (part of token.parts; track part) {
-  <span class="part"
-    [ngClass]="{'is-highlight': part.highlight}">@for (segment of part.segments; track segment) {
-    <span class="segment"
-    [ngClass]="{'is-small-caps': segment.smallCaps}">{{segment.text}}</span>
-  }</span>
+(
+@for (token of tokens; track token) {
+  @for (part of token.parts; track part) {
+    <span class="part" [class.is-highlight]="part.highlight">
+      @for (segment of part.segments; track segment) {
+        <span class="segment" [class.is-small-caps]="segment.smallCaps">{{
+          segment.text
+        }}</span>
+      }
+    </span>
+  }
 }
-})
+)

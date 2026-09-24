@@ -30,11 +30,10 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "main": "library/src/test.ts",
             "tsConfig": "library/tsconfig.spec.json",
-            "karmaConfig": "library/karma.conf.js"
+            "runner": "vitest"
           }
         }
       }
@@ -60,9 +59,6 @@
               "base": "dist/frontend"
             },
             "index": "frontend/src/index.html",
-            "polyfills": [
-              "frontend/src/polyfills.ts"
-            ],
             "tsConfig": "frontend/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -106,8 +102,7 @@
             "testing": {
               "aot": false,
               "optimization": false,
-              "extractLicenses": false,
-              "polyfills": "frontend/src/polyfills.ts"
+              "extractLicenses": false
             }
           },
           "defaultConfiguration": "production"
@@ -134,9 +129,6 @@
           "builder": "@angular/build:unit-test",
           "options": {
             "tsConfig": "frontend/tsconfig.spec.json",
-            "setupFiles": [
-              "frontend/src/test.ts"
-            ],
             "buildTarget": ":build:testing",
             "runner": "vitest"
           }
@@ -161,9 +153,6 @@
               "base": "dist/elements"
             },
             "index": "elements/src/index.html",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "elements/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -201,11 +190,7 @@
             "testing": {
               "aot": false,
               "optimization": false,
-              "extractLicenses": false,
-              "polyfills": [
-                "zone.js",
-                "zone.js/testing"
-              ]
+              "extractLicenses": false
             }
           },
           "defaultConfiguration": "production"
