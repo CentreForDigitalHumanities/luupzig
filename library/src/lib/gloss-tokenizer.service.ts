@@ -117,12 +117,15 @@ export class GlossTokenizerService {
       });
     }
 
-    if (parts[0].segments.length) {
-      tokens.push({
-        parts
-      });
-    }
 
+    for (let part of parts) {
+        if (part.segments.length) {
+          tokens.push({
+            parts
+          });
+          break;
+        }
+    }
     return tokens;
   }
 
