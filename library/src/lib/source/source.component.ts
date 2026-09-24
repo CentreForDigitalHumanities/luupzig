@@ -1,9 +1,11 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'luu-source',
-  templateUrl: './source.component.html',
-  styleUrls: ['./source.component.scss']
+    selector: 'luu-source',
+    templateUrl: './source.component.html',
+    styleUrls: ['./source.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class SourceComponent {
 

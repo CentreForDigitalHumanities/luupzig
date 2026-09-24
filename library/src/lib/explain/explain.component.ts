@@ -1,10 +1,12 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, ChangeDetectionStrategy } from '@angular/core';
 import { GlossTokenizerService, Token } from '../gloss-tokenizer.service';
 
 @Component({
-  selector: 'luu-explain',
-  templateUrl: './explain.component.html',
-  styleUrls: ['./explain.component.scss']
+    selector: 'luu-explain',
+    templateUrl: './explain.component.html',
+    styleUrls: ['./explain.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class ExplainComponent implements OnChanges {
 
